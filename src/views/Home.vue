@@ -22,6 +22,14 @@
                 <b-field label="Start over?" message="When you hit the site we start processing txs">
                     <button @click="reset" class="button is-primary is-outlined">Reset stats</button>
                 </b-field>
+
+                <hr/>
+
+                <blockquote>
+                    We are using Blocknative's the Gas Distribution feed. This feed provides the distribution of the top gas prices in the mempool right now.
+                    <br/>
+                    This enables us to build a dynamic dataset to guess-timate a good gas price to get in the next few blocks visually.
+                </blockquote>
             </div>
         </div>
 

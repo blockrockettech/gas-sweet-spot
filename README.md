@@ -1,4 +1,8 @@
-# lowball
+# gas-sweet-spot
+
+Entry into The Most Interesting Use Of Blocknative’s Gas Platform Gitcoin Hackathon
+
+See https://gitcoin.co/issue/blocknative/sdk/99
 
 ## Project setup
 ```
