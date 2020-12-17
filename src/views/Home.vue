@@ -7,7 +7,7 @@
                 <line-chart :chart-data="datacollection" :options="options"></line-chart>
             </div>
             <div class="column">
-                <h2>Welcome to the knowledge of the crowd</h2>
+                <h2>Welcome to the knowledge of the crowd...</h2>
 
                 <h3 class="is-family-monospace has-text-grey-light">{{ totalTxs }} txs crunched</h3>
 
@@ -15,7 +15,7 @@
                     The crowd thinks <span class="has-text-weight-semibold">{{ winning.key }}ish gwei</span> would get your tx the new few blocks...
                 </div>
 
-                <b-field label="Modulo" message="Find the sweet spot of gas ranges for your analysis">
+                <b-field label="Modulo" message="Find the sweet spot of gas ranges for your analysis" style="margin-top: 40px">
                     <b-slider v-model="modulo" :min="5" :max="50" :step="5"></b-slider>
                 </b-field>
 
@@ -23,10 +23,9 @@
                     <button @click="reset" class="button is-primary is-outlined">Reset stats</button>
                 </b-field>
 
-                <hr/>
-
-                <blockquote>
+                <blockquote style="margin-top: 40px">
                     We are using Blocknative's the Gas Distribution feed. This feed provides the distribution of the top gas prices in the mempool right now.
+                    <br/>
                     <br/>
                     This enables us to build a dynamic dataset to guess-timate a good gas price to get in the next few blocks visually.
                 </blockquote>

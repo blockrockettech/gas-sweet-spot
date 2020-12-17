@@ -4,6 +4,8 @@ Entry into The Most Interesting Use Of Blocknative’s Gas Platform Gitcoin Hack
 
 See https://gitcoin.co/issue/blocknative/sdk/99
 
+DEMO: https://gas-sweetspot.web.app
+
 ## Project setup
 ```
 npm install
