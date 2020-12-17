@@ -4,15 +4,23 @@
         <hr/>
         <div class="columns">
             <div class="column">
-                <line-chart :chart-data="datacollection" :options="options"></line-chart>
+                <line-chart :chart-data="datacollection" :options="options" v-if="totalTxs"></line-chart>
+                <h3 v-else class="is-family-monospace has-text-grey-light">Brewing a graph...</h3>
             </div>
             <div class="column">
                 <h2>Welcome to the knowledge of the crowd...</h2>
+                <p>
+                   Generally people we want transactions processed in the new few mins.
+                </p>
+                <p>
+                    This show the best "top" price for quick acceptance...in theory.
+                </p>
 
-                <h3 class="is-family-monospace has-text-grey-light">{{ totalTxs }} txs crunched</h3>
+                <h3 class="is-family-monospace has-text-grey-light" v-if="totalTxs">{{ totalTxs }} pending txs crunched</h3>
+                <h3 v-else class="is-family-monospace has-text-grey-light">Waiting for txs...</h3>
 
-                <div class="notification is-warning" v-if="winning">
-                    The crowd thinks <span class="has-text-weight-semibold">{{ winning.key }}ish gwei</span> would get your tx the new few blocks...
+                <div class="notification is-light" v-if="winning">
+                    <span class="is-size-3">🧐</span> The crowd thinks <span class="has-text-weight-semibold">{{ winning.key }}ish gwei</span> would be accepted in the new few blocks...
                 </div>
 
                 <b-field label="Modulo" message="Find the sweet spot of gas ranges for your analysis" style="margin-top: 40px">
@@ -24,10 +32,7 @@
                 </b-field>
 
                 <blockquote style="margin-top: 40px">
-                    We are using Blocknative's the Gas Distribution feed. This feed provides the distribution of the top gas prices in the mempool right now.
-                    <br/>
-                    <br/>
-                    This enables us to build a dynamic dataset to guess-timate a good gas price to get in the next few blocks visually.
+                    We are using <a href="https://blocknative.com" target="_blank">Blocknative</a>'s the <a href="https://docs.blocknative.com/gas-platform" target="_blank">Gas Distribution feed</a>. This feed provides the distribution of the top gas prices in the mempool right now.
                 </blockquote>
             </div>
         </div>
