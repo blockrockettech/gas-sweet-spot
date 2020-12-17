@@ -4,6 +4,11 @@ import router from './router';
 import store from './store';
 
 import Trend from "vuetrend";
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+
+Vue.use(Buefy)
+
 
 Vue.use(Trend);
 
