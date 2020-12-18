@@ -10,10 +10,10 @@
             <div class="column">
                 <h2>Welcome to the knowledge of the crowd...</h2>
                 <p>
-                   Generally people we want transactions processed in the new few mins.
+                   Generally people want transactions processed in the new few minutes.
                 </p>
                 <p>
-                    This show the best "top" price for quick acceptance...in theory.
+                    This shows the best "top" price for quick acceptance...in theory.
                 </p>
 
                 <h3 class="is-family-monospace has-text-grey-light" v-if="totalTxs">{{ totalTxs }} pending txs crunched</h3>
